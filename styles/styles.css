@@ -116,7 +116,7 @@ body {
 /* chatbot container */
 .chatbot-container {
 	position: fixed;
-	right: 300px;
+	right: 200px;
 	width: 450px;
 	height: 650px;
 	background: transparent;
