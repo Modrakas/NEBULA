@@ -29,8 +29,7 @@ body {
 
 .chatbot-container {
 	position: fixed;
-	right: 425px;
-	/* bottom: 80px; */
+	right: 250px;
 	width: 350px;
 	height: 550px;
 	letter-spacing: 1.5px;
@@ -106,7 +105,7 @@ body.show-chatbot .chatbot-container {
 .message-body .message .message-text {
 	padding: 12px 16px;
 	max-width: 80%;
-	font-size: .95rem;
+	font-size: .75rem;
 	background: var(--bot-msg-bg-color);
 	color: var(--bg-color);
 	border-radius: 10px 10px 10px 3px;
@@ -199,7 +198,7 @@ body.show-chatbot .chatbot-container {
 	resize: none;
 	max-height: 180px;
 	white-space: pre-line;
-	font-size: 0.95rem;
+	font-size: 0.75rem;
 	padding: 14px 0 13px 18px;
 	border-radius: inherit;
 	background: transparent;
