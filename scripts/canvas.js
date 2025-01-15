@@ -91,18 +91,14 @@ const resizeCanvas = () => {
  initateCircles();
 }
 
-
 //make canvas full width on page load
 resizeCanvas();
-
 
 //make canvas ful width when screen is resized
 window.addEventListener('resize', resizeCanvas);
 
-
 //create circle data on page load
 initateCircles();
-
 
 //run animation on page
 animate();

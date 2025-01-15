@@ -3,11 +3,14 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="styles.css">
- <title>Document</title>
+ <script src="https://kit.fontawesome.com/887839b609.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/styles/glitch.css">
+ <link rel="stylesheet" href="/styles/chatbot.css">
+ <link rel="stylesheet" href="/styles/amina.css">
+ <title>Diya ChatBot</title>
 </head>
 <body>
-  <section class="hero">
+  <section class="amina-container">
     <canvas id="canvas" width="500" height="500">
     </canvas>
     <div class="diya-amina">
@@ -25,11 +28,49 @@
     <div id="app">
       <div id="wrapper">
         <h1 class="glitch" data-text="HELLO!">HELLO!</h1>
-        <button class="sub" data-text="Would you like to talk?">Would you like to talk?</button>
+        <button class="sub" id="chatbot-toggler" data-text="Would you like to talk?">Would you like to talk?</button>
+      </div>
+    </div>
+
+    <div class="chatbot-container">
+      <!-- ChatBot Header -->
+      <div class="header">
+        <div class="header-logo">
+          <h2 class="logo-text">Diya</h2>
+        </div>
+          <button class="close-chatbot"><i class="fa-solid fa-chevron-down"></i></button>
+      </div>
+    
+      <!-- ChatBot Message Container -->
+      <div class="message-body">
+        <div class="message chatbot-message">
+          <div class="message-text">
+            Hello! <br> How can I help you?
+          </div>
+        </div>
+      </div>
+    
+      <!-- ChatBot Input -->
+      <div class="input">
+        <form action="#" class="input-form" id="form">
+          <textarea placeholder="Message..." class="message-input" id="msg-input" required></textarea>
+          <div class="btn-controls">
+            <button type="button"><i class="fa-regular fa-face-smile" id="emoji-picker"></i></button>
+            <div class="file-upload-container">
+              <input type="file" accept="images/" id="file-upload" hidden>
+              <img src="#">
+              <button type="button" id="file-upload-btn"><i class="fa-solid fa-plus"></i></button>
+              <button type="button" id="file-cancel-btn"><i class="fa-solid fa-close"></i></button>
+            </div>
+            <button type="submit" class="send" id="send-message"><i class="fa-solid fa-arrow-up"></i></button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
 
-     <script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+      <script src="/scripts/script.js"></script>
+      <script src="/scripts/canvas.js"></script>
+  </body>
 </html>

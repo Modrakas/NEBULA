@@ -1,204 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
-
-
-:root {
- --first-color: #bbb1fb;
- --second-color: #86f9db;
- --third-color: #abf4fb;
- --bg-color: #685ea0;
- --other: #fdf8fe, #ebeefb, #e7fbfa, #ffffff;
-
- --header-font: 'fira-mono', sans-serif;
- --body-font: 'arial', sans-serif;
-}
-
-
-* {
- margin: 0;
- padding: 0;
-}
-
-
-body {
- font-family: sans-serif;
- overflow-x: hidden;
-}
-
-
-#canvas {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- z-index: -1;
-}
-
-
-.hero {
- height: 100vh;
- min-width: 20em;
- display: flex;
- align-items: center;
- justify-content: center;
- position: relative;
- overflow: hidden;
-}
-
-
-.hero::before {
- content: '';
- background: hsla(0, 0%, 41%, 0.25);
- backdrop-filter: blur(70px);
- -webkit-backdrop-filter: blur(70px);
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
-}
-
-
-.diya-amina {
- position: relative;
- display: flex;
- align-items: center;
- justify-content: center;
- width: 600px;
- height: 595px;
- /* top: -150px; */
- border-radius: 50%;
- box-shadow:
- inset 0 0 50px #fff,
- inset 20px 0 60px #f6f1da,
- inset -20px 0 60px #d6cfbb,
-  inset 20px 0 250px #f6f1da,
- inset -20px 0 250px #d6cfbb,
- 
- 0 0 5px #fff,
- -10px 0 60px #f6f1da,
- 10px 0 60px #d6cfbb;
- animation: load 4s infinite;
-}
-
-
-@keyframes load {
- 0% {
-   transform: rotate(0);
- }
- 50% {
-   filter: brightness(80%);
-   filter: hue-rotate(100deg);
- }
- 100% {
-   transform: rotate(360);
- }
-}
-
-
-.molecule {
- position: absolute;
- display: flex;
- align-items: flex-start;
- justify-content: center;
- width: 50px;
- height: 50px;
- animation: animate 37s linear infinite, particles 25s ease-in-out infinite;
-}
-
-
-.molecule:nth-child(2){
- width: 80px;
- height: 80px;
- animation: animate 29s linear infinite, particles 30s ease-in-out infinite;
-}
-
-
-.molecule:nth-child(3){
- width: 100px;
- height: 100px;
- animation: animate 33s linear infinite, particles 30s ease-in-out infinite;
-}
-
-
-.molecule:nth-child(4){
- width: 100px;
- height: 100px;
- animation: animate 30s linear infinite, particles 33s ease-in-out infinite;
-}
-
-
-.molecule::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- width: 15px;
- height: 15px;
- background: #fff;
- border-radius: 50%;
- box-shadow: 0 0 20px #fff,
- 0 0 60px #ebeefb,
-  40px -70px 0 #fdf8fe,
- 40px -70px 20px #fff,
-
-
- 70px -70px 0 #e7fbfa,
- 70px -70px 20px #fdf8fe,
-  -70px -100px 0 #ebeefb,
- -70px -100px 20px #e7fbfa;
- animation: animate 40s linear infinite;
-}
-
-
-@keyframes animate {
- 0% {
-   transform: rotate(0deg);
- }
- 100% {
-   transform: rotate(360deg);
- }
-}
-
-
-@keyframes particles {
- 0%, 100% {
-   scale: 0.5;
- }
- 50% {
-   scale: 1.25;
- }
-}
-
-
-.intro-text {
- position: absolute;
- bottom: 380px;
- color: #fff;
-}
-
-
-.catbot-container {
- width: 350px;
- height: 325px;
- background: transparent;
- position: absolute;
- bottom: 0px;
-}
-
 /* GLITCH TEXT */
 #app {
   background: transparent;
-  height: 475px;
-  width: 375px;
-  margin: 0;
   margin-top: 100px;
-  padding: 0;
   position: absolute;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  opacity: 1;
+}
+
+body.show-chatbot #app {
+  opacity: 0;
 }
 
 #wrapper {
@@ -212,22 +21,25 @@ body {
 
 .sub {
   color: var(--bg-color);
-  font-size: 1em;
-  letter-spacing: .25em;
+  font-size: .80em;
+  font-family: var(--main-font);
+  cursor: pointer;
+  letter-spacing: .20em;
   animation: glitch-skew 5s infinite linear alternate-reverse;
 }
 
 .sub:hover {
-  font-size: 1.05em;
+  font-size: .85em;
 }
 
 #wrapper h1 {
-  color: #fff;
+  margin-left: 20px;
+  color: var(--white-color-4);
   font-size: 3.5em;
-  letter-spacing: 0.35em;
+  font-family: var(--main-font);
+  letter-spacing: 0.25em;
   animation: glitch-skew 3s infinite linear alternate-reverse;
 }
-
 .glitch::before,
 .glitch::after,
 .sub::before,
